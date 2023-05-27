@@ -7,8 +7,8 @@ ion-content {
         justify-content: center;
         align-items: center;
         position: relative;
-        margin-top: 5vh;
-        margin-bottom: 7vh;
+        margin-top: 3vh;
+        margin-bottom: 3vh;
         
         img {
             height: 150px;
@@ -33,6 +33,7 @@ ion-content {
                 background-color: var(--ion-color-light);
                 --padding-start: 15px;
                 height: 45px;
+                margin-bottom: 30px;
             }
 
             p.forgotpassword {
@@ -41,6 +42,7 @@ ion-content {
                 color: var(--ion-color-tertiary);
                 text-decoration: underline;
                 margin-left: 10px;
+                margin-top: -2vh;
             }
         }
 
@@ -74,7 +76,8 @@ ion-content {
         .buttondiv {
             width: 100%;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
 
             ion-button {
                 font-family: 'LeagueSpartan-Bold';
@@ -82,6 +85,13 @@ ion-content {
                 height: 50px;
                 width: 80vw;
                 color: var(--ion-color-tertiary);
+            }
+
+            p.gotoregister {
+                font-family: "LeagueSpartan-SemiBold";
+                font-size: 16px;
+                color: var(--ion-color-tertiary);
+                text-decoration: underline;
             }
         }
     }    
