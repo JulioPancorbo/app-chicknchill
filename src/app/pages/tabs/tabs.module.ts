@@ -13,9 +13,10 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
-      { path: 'profile', loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule) },
       { path: 'home', loadChildren: () => import('../home/home.module').then(m => m.HomePageModule) },
-      { path: 'chats', loadChildren: () => import('../chats/chats.module').then(m => m.ChatsPageModule) },
+      { path: 'carta', loadChildren: () => import('../carta/carta.module').then(m => m.CartaPageModule) },
+      { path: 'escaner', loadChildren: () => import('../escaner/escaner.module').then(m => m.EscanerPageModule) },
+      { path: 'profile', loadChildren: () => import('../profile/profile.module').then(m => m.ProfilePageModule) },
     ]
   }
 ];
