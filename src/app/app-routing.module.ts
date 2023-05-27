@@ -15,7 +15,9 @@ const routes: Routes = [
   { path: 'forgot-password', canActivate: [AuthGuard], loadChildren: () => import('./pages/forgot-password/forgot-password.module').then(m => m.ForgotPasswordPageModule) },
   { path: 'chats', canActivate: [AuthGuard], loadChildren: () => import('./pages/chats/chats.module').then(m => m.ChatsPageModule) },
   { path: 'interior-chat/:id_chat/:nombre_chat/:ultimo_mensaje', canActivate: [AuthGuard], loadChildren: () => import('./pages/interior-chat/interior-chat.module').then(m => m.InteriorChatPageModule) },
-  { path: 'tabs', loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule) },
+  { path: 'tabs', loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule) },  { path: 'carta', loadChildren: './pages/carta/carta.module#CartaPageModule' },
+  { path: 'escaner', loadChildren: './pages/escaner/escaner.module#EscanerPageModule' },
+
   // , canActivate: [AuthGuard]
 
 

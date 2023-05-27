@@ -1,0 +1,40 @@
+ion-tab-bar {
+    height: 90px;
+    padding-left: 4%;
+    padding-right: 4%;
+
+    ion-tab-button {
+
+        ion-icon {
+            width: 30px;
+            height: 30px;
+            fill: none;
+        }
+
+        &.tab-selected {
+
+            ion-icon {
+                width: 40px;
+                height: 40px;
+                fill: var(--ion-color-primary);
+                transition: 0.3s;
+            }
+
+            ion-label {
+                font-size: 20px;
+                transition: 0.3s;
+            }
+        }
+    }
+
+
+
+    ion-label {
+        margin-top: 5px;
+        color: var(--ion-color-tertiary);
+        --color-selected: #F4A75F;
+        font-family: 'LeagueSpartan-SemiBold';
+        font-size: 18px;
+    }
+
+}

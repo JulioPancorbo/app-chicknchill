@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 export class TabsPage implements OnInit {
 
   public pages = [
-    { tab: 'chats', name: 'Chats', icon: 'chatbubbles' },
-    { tab: 'home', name: 'Inicio', icon: 'home' },
-    { tab: 'profile', name: 'Perfil', icon: 'person' }
+    { tab: 'home', name: 'Inicio', icon: '/assets/icons/home.svg' },
+    { tab: 'carta', name: 'Carta', icon: '/assets/icons/book.svg' },
+    { tab: 'escaner', name: 'Escáner', icon: '/assets/icons/qrcode.svg' },
+    { tab: 'profile', name: 'Perfil', icon: '/assets/icons/profile-circle.svg' }
   ];
 
   constructor() { }
