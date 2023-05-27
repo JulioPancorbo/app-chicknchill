@@ -9,6 +9,7 @@ ion-tab-bar {
             width: 30px;
             height: 30px;
             fill: none;
+            transition: 0.3s;
         }
 
         &.tab-selected {
