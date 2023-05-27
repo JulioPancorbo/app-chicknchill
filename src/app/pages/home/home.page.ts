@@ -9,6 +9,22 @@ import { MenuController } from '@ionic/angular';
 })
 export class HomePage implements OnInit {
 
+  products: any[] = [
+    {
+      id: 1,
+      name: 'Pizza',
+      price: 10,
+      image: 'https://www.pizzahut.com.pk/images/products/2020/01/01/pepperoni-supreme-regular.png'
+    },
+    {
+      id: 2,
+      name: 'Burger',
+      price: 5,
+      image: 'https://www.pizzahut.com.pk/images/products/2020/01/01/pepperoni-supreme-regular.png'
+    }
+  ]
+    
+
   constructor(private apiService:ApiService,
     private menuCtrl:MenuController) { }
 

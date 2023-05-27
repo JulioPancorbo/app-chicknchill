@@ -1,0 +1,88 @@
+ion-content {
+    --background: var(--ion-color-primary);
+
+    .header {
+        width: 80vw;
+        margin: 2vh 10vw 0vh 10vw;
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: 15vh;
+        align-items: flex-end;
+
+        p.title {
+            font-family: 'LeagueSpartan-ExtraBold';
+            font-size: 22px;
+            color: var(--ion-color-tertiary);
+            margin-bottom: 0;
+            
+            span {
+                font-size: 26px;
+                color: var(--ion-color-tertiary);
+            }
+        }
+        
+        img {
+            position: absolute;
+            height: 120px;
+            right: -10vw;
+            top: 0;
+        }
+    }
+
+    p.slogan {
+        font-family: 'LeagueSpartan-Medium';
+        font-size: 16px;
+        color: var(--ion-color-tertiary);
+        width: 80vw;
+        margin-bottom: 40px;
+        margin-left: 10vw;
+    }
+
+    .star-products {        
+        width: 80vw;
+        margin-left: 10vw;
+        background: var(--ion-color-secondary);
+        border-radius: 10px;
+        border: 2px solid var(--ion-color-tertiary);
+
+        .header-star-products {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background: var(--ion-color-tertiary);
+
+            
+            ion-icon {
+                font-size: 20px;
+                margin-left: 15px;
+                margin-bottom: 5px;
+            }
+    
+            p.title-star-products {
+                font-family: 'LeagueSpartan-Bold';
+                font-size: 20px;
+                color: var(--ion-color-primary);
+                margin: 15px 10px;
+            }
+        }
+
+        .productdiv {
+            width: 90%;
+            margin: 15px 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            .product {
+                background: var(--ion-color-tertiary);
+                width: 48%;
+                height: 130px;
+                border-radius: 10px;
+            }
+        }
+
+    }
+
+
+}

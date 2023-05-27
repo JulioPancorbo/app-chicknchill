@@ -1,3 +1,26 @@
-<ion-content class="ion-text-center">
-  <h2>Bienvenido al Ionic Base</h2>
+<ion-content>
+  
+  
+  <div class="header">
+    <p class="title">Bienvenido a<br><span>CHICK 'N' CHILL</span></p>
+    <img src="assets/imgs/chicklogo.PNG" alt="logo" class="logo">
+  </div>
+  <p class="slogan">slogan slogan slogan slogan slogan slogan</p>
+
+  <div class="star-products">
+    <div class="header-star-products">
+      <ion-icon src="/assets/icons/star.svg" slot="start"></ion-icon>
+      <p class="title-star-products">PRODUCTOS ESTRELLA</p>
+    </div>
+
+    <div class="productdiv">
+      <div class="product" *ngFor="let product of products">
+        <img src="{{product.image}}" alt="product" class="product-image">
+        <p class="product-name">{{product.name}}</p>
+        <p class="product-price">{{product.price}}€</p>
+      </div>
+    </div>
+
+  </div>
+  
 </ion-content>
