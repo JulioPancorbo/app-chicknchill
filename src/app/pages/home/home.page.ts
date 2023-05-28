@@ -12,15 +12,13 @@ export class HomePage implements OnInit {
   products: any[] = [
     {
       id: 1,
-      name: 'Pizza',
-      price: 10,
-      image: 'https://www.pizzahut.com.pk/images/products/2020/01/01/pepperoni-supreme-regular.png'
+      name: 'ALITAS DE POLLO',
+      image: '/assets/imgs/alitas.jpg'
     },
     {
       id: 2,
-      name: 'Burger',
-      price: 5,
-      image: 'https://www.pizzahut.com.pk/images/products/2020/01/01/pepperoni-supreme-regular.png'
+      name: 'CHICKEN POPS',
+      image: '/assets/imgs/chicken-pops.jpg'
     }
   ]
     

@@ -3,12 +3,12 @@ ion-content {
 
     .header {
         width: 80vw;
-        margin: 2vh 10vw 0vh 10vw;
+        margin: 3vh 10vw 0vh 10vw;
         display: flex;
         flex-direction: row;
         position: relative;
-        height: 15vh;
         align-items: flex-end;
+        justify-content: space-between;
 
         p.title {
             font-family: 'LeagueSpartan-ExtraBold';
@@ -23,10 +23,11 @@ ion-content {
         }
         
         img {
-            position: absolute;
-            height: 120px;
-            right: -10vw;
-            top: 0;
+            position: relative;
+            height: 100px;
+            width: 100px;
+            // right: -10vw;
+            // top: 0;
         }
     }
 
@@ -45,6 +46,7 @@ ion-content {
         background: var(--ion-color-secondary);
         border-radius: 10px;
         border: 2px solid var(--ion-color-tertiary);
+        margin-bottom: 30px;
 
         .header-star-products {
             display: flex;
@@ -79,9 +81,84 @@ ion-content {
                 width: 48%;
                 height: 130px;
                 border-radius: 10px;
+                
+                .imagediv {
+                    width: 100%;
+                    height: 70%;
+
+                    .product-image {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                        object-position: center;
+                    }
+                }
+
+                .namediv {
+                    width: 100%;
+                    height: 30%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .product-name {
+                        font-family: 'LeagueSpartan-Bold';
+                        font-size: 16px;
+                        color: var(--ion-color-primary);
+                        text-align: center;
+                        margin: 5px;
+                    }
+                }
             }
         }
+    }
 
+    p.visit-us {
+        width: 90vw;
+        margin-left: 10vw;
+        font-family: 'LeagueSpartan-SemiBold';
+        font-size: 16px;
+        color: var(--ion-color-tertiary);
+    }
+
+    .divmap {
+        width: 80vw;
+        margin-left: 10vw;
+        height: 150px;
+        margin-bottom: 10px;
+        border-radius: 10px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
+    }
+
+    .info {
+        width: 80vw;
+        margin-left: 10vw;
+        margin-bottom: 5vh;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            ion-icon {
+                font-size: 18px;
+                margin-right: 10px;
+            }
+
+            p.info-text {
+                font-family: 'LeagueSpartan-SemiBold';
+                font-size: 14px;
+                color: var(--ion-color-tertiary);
+                margin-bottom: 10px;
+            }
+        }
     }
 
 
