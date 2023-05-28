@@ -1,9 +1,42 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>carta</ion-title>
-  </ion-toolbar>
+
+  <ion-segment (ionChange)="segmentChanged($event)" mode="md" color="primary" scrollable>
+    <ion-segment-button value="promotions" mode="md" checked>
+      <ion-icon name="people"></ion-icon>
+      <ion-label>Promociones</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="entrantes" mode="md">
+      <ion-icon name="people"></ion-icon>
+      <ion-label>Entrantes</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="principales" mode="md">
+      <ion-icon name="people"></ion-icon>
+      <ion-label>Principales</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="postres" mode="md">
+      <ion-icon name="people"></ion-icon>
+      <ion-label>Postres</ion-label>
+    </ion-segment-button>
+  </ion-segment>  
+
 </ion-header>
 
 <ion-content>
+
+  <div class="promotions" *ngIf="segmentSelected == 'promotions'">
+    <p>PROMOCIONES</p>
+  </div>
+
+  <div class="entrantes" *ngIf="segmentSelected == 'entrantes'">
+    <p>ENTRANTES</p>
+  </div>
+
+  <div class="principales" *ngIf="segmentSelected == 'principales'">
+    <p>PRINCIPALES</p>
+  </div>
+
+  <div class="postres" *ngIf="segmentSelected == 'postres'">
+    <p>POSTRES</p>
+  </div>
 
 </ion-content>

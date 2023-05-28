@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartaPage implements OnInit {
 
-  constructor() { }
+  public segmentSelected: string;
+
+  constructor() {
+    this.segmentSelected = 'promotions';
+   }
 
   ngOnInit() {
+  }
+
+  segmentChanged(ev: any) {
+    console.log('Segment changed', ev.detail.value);
+    this.segmentSelected = ev.detail.value;
   }
 
 }
