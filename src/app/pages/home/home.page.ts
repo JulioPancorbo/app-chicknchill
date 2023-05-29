@@ -13,12 +13,12 @@ export class HomePage implements OnInit {
     {
       id: 1,
       name: 'ALITAS DE POLLO',
-      image: '/assets/imgs/alitas.jpg'
+      image: '/assets/imgs/wings.jpg'
     },
     {
       id: 2,
       name: 'CHICKEN POPS',
-      image: '/assets/imgs/chicken-pops.jpg'
+      image: '/assets/imgs/pops.jpg'
     }
   ]
     
