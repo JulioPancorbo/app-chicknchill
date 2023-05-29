@@ -21,24 +21,7 @@ import { UtilitiesService } from './services/utilities.service';
 export class AppComponent implements OnInit {
 
   user: User;
-  public isLoading: boolean = true;
-  public appPages = [
-    {
-      title: 'Iniciou',
-      url: '/home',
-      icon: 'home'
-    },
-    {
-      title: 'Perfil',
-      url: '/profile',
-      icon: 'person'
-    },
-    {
-      title: 'Chats',
-      url: '/chats',
-      icon: 'chatboxes'
-    }
-  ];
+  public isLoading: boolean = true;  
 
   constructor(
     private platform: Platform,
