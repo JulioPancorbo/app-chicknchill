@@ -1,20 +1,32 @@
 <ion-header>
 
   <ion-segment (ionChange)="segmentChanged($event)" mode="md" color="primary" scrollable>
-    <ion-segment-button value="promotions" mode="md" checked>
-      <ion-icon name="people"></ion-icon>
+    <!-- <ion-segment-button value="promociones" mode="md" checked>
+      <ion-icon src="/assets/icons/offer.svg"></ion-icon>
       <ion-label>Promociones</ion-label>
-    </ion-segment-button>
-    <ion-segment-button value="entrantes" mode="md">
-      <ion-icon name="people"></ion-icon>
+    </ion-segment-button> -->
+    <ion-segment-button value="entrantes" mode="md" checked>
+      <ion-icon src="/assets/icons/fries.svg"></ion-icon>
       <ion-label>Entrantes</ion-label>
     </ion-segment-button>
     <ion-segment-button value="principales" mode="md">
-      <ion-icon name="people"></ion-icon>
+      <ion-icon src="/assets/icons/chicken-leg.svg"></ion-icon>
       <ion-label>Principales</ion-label>
     </ion-segment-button>
+    <ion-segment-button value="menus" mode="md">
+      <ion-icon src="/assets/icons/menu.svg"></ion-icon>
+      <ion-label>Menús</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="bebidas" mode="md">
+      <ion-icon src="/assets/icons/soda.svg"></ion-icon>
+      <ion-label>Bebidas</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="salsas" mode="md">
+      <ion-icon src="/assets/icons/sauce.svg"></ion-icon>
+      <ion-label>Salsas</ion-label>
+    </ion-segment-button>
     <ion-segment-button value="postres" mode="md">
-      <ion-icon name="people"></ion-icon>
+      <ion-icon src="/assets/icons/dessert.svg"></ion-icon>
       <ion-label>Postres</ion-label>
     </ion-segment-button>
   </ion-segment>  
@@ -23,20 +35,73 @@
 
 <ion-content>
 
-  <div class="promotions" *ngIf="segmentSelected == 'promotions'">
-    <p>PROMOCIONES</p>
+  <!-- <div class="container" *ngIf="segmentSelected == 'promociones'">
+    <ion-card class="promotion-card" *ngFor="let promotion of promotions">
+      <div class="gradient"></div>
+      <img src="{{promotion.image}}" alt="Promoción">
+      <ion-card-title>{{promotion.name}}</ion-card-title>
+    </ion-card>
+  </div> -->
+
+  <div class="container" *ngIf="segmentSelected == 'entrantes'">    
+    <ion-card class="entrante-card" *ngFor="let entrante of entrantes">
+      <div class="gradient"></div>
+      <div class="imagediv">
+        <img src="{{entrante.image}}" alt="Entrante">
+      </div>
+      <ion-card-title>{{entrante.name}}</ion-card-title>
+    </ion-card>
   </div>
 
-  <div class="entrantes" *ngIf="segmentSelected == 'entrantes'">
-    <p>ENTRANTES</p>
+  <div class="container" *ngIf="segmentSelected == 'principales'">
+    <ion-card class="principal-card" *ngFor="let principal of principales">
+      <div class="gradient"></div>  
+      <div class="imagediv">
+        <img src="{{principal.image}}" alt="Principal">
+      </div>
+      <ion-card-title>{{principal.name}}</ion-card-title>
+    </ion-card>
   </div>
 
-  <div class="principales" *ngIf="segmentSelected == 'principales'">
-    <p>PRINCIPALES</p>
+  <div class="container" *ngIf="segmentSelected == 'menus'">
+    <p class="subtitle">Todos los menús incluyen refill de patatas y bebidas</p>
+    <ion-card class="menu-card" *ngFor="let menu of menus">
+      <div class="gradient"></div>
+      <div class="imagediv">
+        <img src="{{menu.image}}" alt="Menu">
+      </div>
+      <ion-card-title>{{menu.name}}</ion-card-title>
+    </ion-card>
   </div>
 
-  <div class="postres" *ngIf="segmentSelected == 'postres'">
-    <p>POSTRES</p>
+  <div class="container" *ngIf="segmentSelected == 'bebidas'">
+    <ion-card class="bebida-card" *ngFor="let bebida of bebidas">
+      <div class="gradient"></div>
+      <div class="imagediv">
+        <img src="{{bebida.image}}" alt="Bebida">
+      </div>
+      <ion-card-title>{{bebida.name}}</ion-card-title>
+    </ion-card>
+  </div>
+
+  <div class="container" *ngIf="segmentSelected == 'salsas'">
+    <ion-card class="salsa-card" *ngFor="let salsa of salsas">
+      <div class="gradient"></div>
+      <div class="imagediv">
+        <img src="{{salsa.image}}" alt="Salsa">
+      </div>
+      <ion-card-title>{{salsa.name}}</ion-card-title>
+    </ion-card>
+  </div>  
+
+  <div class="container" *ngIf="segmentSelected == 'postres'">
+    <ion-card class="postre-card" *ngFor="let postre of postres">
+      <div class="gradient"></div>
+      <div class="imagediv">
+        <img src="{{postre.image}}" alt="Postre" style="margin-top: 5px !important">
+      </div>
+      <ion-card-title>{{postre.name}}</ion-card-title>
+    </ion-card>
   </div>
 
 </ion-content>
