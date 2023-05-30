@@ -12,4 +12,8 @@ export class EscanerPage implements OnInit {
   ngOnInit() {
   }
 
+  public scanQR() {
+    console.log('Abrir escáner código QR');
+  }
+
 }
