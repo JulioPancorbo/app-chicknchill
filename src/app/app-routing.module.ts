@@ -17,7 +17,8 @@ const routes: Routes = [
   { path: 'interior-chat/:id_chat/:nombre_chat/:ultimo_mensaje', loadChildren: () => import('./pages/interior-chat/interior-chat.module').then(m => m.InteriorChatPageModule) },
   { path: 'tabs', loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule) },
   { path: 'carta', loadChildren: () => import('./pages/carta/carta.module').then(m => m.CartaPageModule) },
-  { path: 'escaner', loadChildren: () => import('./pages/escaner/escaner.module').then(m => m.EscanerPageModule) },
+  { path: 'escaner', loadChildren: () => import('./pages/escaner/escaner.module').then(m => m.EscanerPageModule) },  { path: 'modal-producto', loadChildren: './pages/modal-producto/modal-producto.module#ModalProductoPageModule' },
+
   // , canActivate: [AuthGuard]
 
 

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular'
+import { ModalProductoPage } from '../modal-producto/modal-producto.page';
 
 @Component({
   selector: 'app-carta',
@@ -8,6 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class CartaPage implements OnInit {
 
   public segmentSelected: string;
+
   // public promotions: any[] = [
   //   {
   //     id: 1,
@@ -237,9 +240,9 @@ export class CartaPage implements OnInit {
       image: '/assets/imgs/nobg/eclair.png',
       price: 380
     }
-  ];
+  ];  
 
-  constructor() {
+  constructor(private modalCtrl: ModalController) {
     this.segmentSelected = 'entrantes';
    }
 
@@ -248,6 +251,17 @@ export class CartaPage implements OnInit {
 
   segmentChanged(ev: any) {
     this.segmentSelected = ev.detail.value;
+  }
+
+  async presentModal() {
+    const modal = await this.modalCtrl.create({
+      component: ModalProductoPage,
+      mode: 'ios',      
+      // enterAnimation: myEnterAnimation,
+      // leaveAnimation: myLeaveAnimation,
+      cssClass: 'modal-producto',
+    });
+    return await modal.present();
   }
 
 }

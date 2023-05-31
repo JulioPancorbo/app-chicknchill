@@ -44,7 +44,7 @@
   </div> -->
 
   <div class="container" *ngIf="segmentSelected == 'entrantes'">    
-    <ion-card class="entrante-card" *ngFor="let entrante of entrantes">
+    <ion-card class="entrante-card" *ngFor="let entrante of entrantes" (click)="presentModal(entrante)">
       <div class="gradient"></div>
       <div class="imagediv">
         <img src="{{entrante.image}}" alt="Entrante">
@@ -54,7 +54,7 @@
   </div>
 
   <div class="container" *ngIf="segmentSelected == 'principales'">
-    <ion-card class="principal-card" *ngFor="let principal of principales">
+    <ion-card class="principal-card" *ngFor="let principal of principales" (click)="presentModal(principal)">
       <div class="gradient"></div>  
       <div class="imagediv">
         <img src="{{principal.image}}" alt="Principal">
@@ -65,7 +65,7 @@
 
   <div class="container" *ngIf="segmentSelected == 'menus'">
     <p class="subtitle">Todos los menús incluyen refill de patatas y bebidas</p>
-    <ion-card class="menu-card" *ngFor="let menu of menus">
+    <ion-card class="menu-card" *ngFor="let menu of menus" (click)="presentModal(menu)">
       <div class="gradient"></div>
       <div class="imagediv">
         <img src="{{menu.image}}" alt="Menu">
@@ -75,7 +75,7 @@
   </div>
 
   <div class="container" *ngIf="segmentSelected == 'bebidas'">
-    <ion-card class="bebida-card" *ngFor="let bebida of bebidas">
+    <ion-card class="bebida-card" *ngFor="let bebida of bebidas" (click)="presentModal(bebida)">
       <div class="gradient"></div>
       <div class="imagediv">
         <img src="{{bebida.image}}" alt="Bebida">
@@ -85,7 +85,7 @@
   </div>
 
   <div class="container" *ngIf="segmentSelected == 'salsas'">
-    <ion-card class="salsa-card" *ngFor="let salsa of salsas">
+    <ion-card class="salsa-card" *ngFor="let salsa of salsas" (click)="presentModal(salsa)">
       <div class="gradient"></div>
       <div class="imagediv">
         <img src="{{salsa.image}}" alt="Salsa">
@@ -95,7 +95,7 @@
   </div>  
 
   <div class="container" *ngIf="segmentSelected == 'postres'">
-    <ion-card class="postre-card" *ngFor="let postre of postres">
+    <ion-card class="postre-card" *ngFor="let postre of postres" (click)="presentModal(postre)">
       <div class="gradient"></div>
       <div class="imagediv">
         <img src="{{postre.image}}" alt="Postre" style="margin-top: 5px !important">

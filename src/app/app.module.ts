@@ -22,6 +22,8 @@ import { environment } from '../environments/environment';
 import { Facebook } from '@ionic-native/facebook/ngx';
 import { GooglePlus } from '@ionic-native/google-plus/ngx';
 
+import { ModalProductoPageModule } from './pages/modal-producto/modal-producto.module';
+
 export function createTranslateLoader(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
@@ -43,6 +45,7 @@ export function createTranslateLoader(http: HttpClient) {
     }),
     AppRoutingModule,
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
+    ModalProductoPageModule
   ],
   providers: [
     StatusBar,
