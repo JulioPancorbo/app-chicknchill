@@ -1,9 +1,17 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>modal-producto</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-icon src="/assets/icons/close-circle.svg" class="icon-close" (click)="dismiss()"></ion-icon>
 
+  <div class="image-container">
+    <img [src]="producto.image" alt="Producto">
+  </div>
+
+  <div class="info-container">
+    <p class="title">{{producto.name}}</p>
+    <p class="description">{{producto.description}}</p>
+    <p class="price">{{price}}€</p>
+  </div>
+
+  <div class="allergens-container">    
+    <img *ngFor="let allergen of allergens" [src]="allergen.icon" alt="Alérgeno">
+  </div>
 </ion-content>
