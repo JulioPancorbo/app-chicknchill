@@ -18,6 +18,7 @@ const routes: Routes = [
   { path: 'tabs', loadChildren: () => import('./pages/tabs/tabs.module').then(m => m.TabsPageModule) },
   { path: 'carta', loadChildren: () => import('./pages/carta/carta.module').then(m => m.CartaPageModule) },
   { path: 'escaner', loadChildren: () => import('./pages/escaner/escaner.module').then(m => m.EscanerPageModule) },  { path: 'modal-producto', loadChildren: './pages/modal-producto/modal-producto.module#ModalProductoPageModule' },
+  { path: 'modal-escaner', loadChildren: './pages/modal-escaner/modal-escaner.module#ModalEscanerPageModule' },
 
   // , canActivate: [AuthGuard]
 
