@@ -1,6 +1,145 @@
-ion-avatar{
-    width: 125px;
-    height: 125px;
-    margin:0 auto;
-    margin-bottom: 10px;
+ion-content {
+    --background: var(--ion-color-primary);
+
+    .header {
+        width: 86vw;
+        margin-left: 7vw;
+        margin-top: 4vh;
+        padding-bottom: 2vh;
+        border-bottom: 2px dashed var(--ion-color-tertiary);
+
+        .title {
+            font-family: LeagueSpartan-Bold;
+            font-size: 26px;
+            color: var(--ion-color-tertiary);           
+        }
+
+        .subtitle {
+            font-family: LeagueSpartan-Medium;
+            font-size: 16px;
+            color: var(--ion-color-tertiary);
+            line-height: 1;
+
+            span {
+                font-family: LeagueSpartan-Bold;
+                color: var(--ion-color-secondary);
+                font-size: 18px;
+            }
+        }
+
+        .subtitle2 {
+            font-family: LeagueSpartan-Medium;
+            font-size: 16px;
+            color: var(--ion-color-tertiary);
+        }
+    }
+
+    .close-icon {
+        position: absolute;
+        top: 4vh;
+        right: 5vw;
+        font-size: 20px;
+        color: var(--ion-color-tertiary);
+    }
+
+    .acumuladas {
+        width: 60vw;
+        margin-left: 20vw;
+        margin-top: 4vh;
+        margin-bottom: 2vh;
+        background-color: var(--ion-color-tertiary);
+        border-radius: 10px;
+        padding: 15px;
+
+        .title2 {
+            font-family: LeagueSpartan-SemiBold;
+            font-size: 16px;
+            color: var(--ion-color-primary);   
+            margin: 0 0 10px 0;        
+        }
+
+        .number-container {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            .number {
+                font-family: LeagueSpartan-Bold;
+                font-size: 40px;
+                color: var(--ion-color-primary);
+                margin: 0;
+            }
+
+            ion-icon {
+                font-size: 40px;
+                margin-left: 10px;
+            }
+        }        
+    }
+
+    .rewards-container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10vh;
+
+        ion-card {
+            width: 40%;
+            height: 200px;
+            background-color: var(--ion-color-secondary);
+            margin: 10px;
+            text-align: center;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            border-radius: 10px;
+
+            ion-card-title {
+                position: relative;
+                font-family: LeagueSpartan-SemiBold;
+                font-size: 18px;
+                color: var(--ion-color-tertiary);
+                margin: 10px 15px -10px 15px;
+            }
+
+            .imagediv{
+                width: 100%;
+                height: 50%;
+                max-height: 50%;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    object-position: center;
+                }
+            }
+
+            .footer {
+                background-color: var(--ion-color-tertiary);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 45px;
+
+                .crestas {
+                    font-family: LeagueSpartan-Bold;
+                    font-size: 30px;
+                    color: var(--ion-color-primary);
+                    margin: 0;
+                }
+    
+                ion-icon {
+                    font-size: 35px;
+                    margin-left: 10px;
+                }
+            }   
+        }
+    }
 }

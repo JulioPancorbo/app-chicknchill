@@ -1,26 +1,34 @@
+<ion-content>  
 
-<app-loading [text]="'Cargando perfil...'" *ngIf="isLoading"></app-loading>
+<div class="header">
+  <p class="title">¡Hola {{user.name}}!</p>
+  <p class="subtitle">Por cada compra que realices, recuerda escanear el código QR de tu ticket de compra para acumular <span>CRESTAS</span></p>
+  <p class="subtitle2">¡Y canjearlas aquí por deliciosas recompensas!</p>
+</div>
 
-<ion-content padding *ngIf="!isLoading">
-  <ion-avatar>
-    <img [src]="user?.avatar" (click)="adjuntarImagen()">
-  </ion-avatar>
+<ion-icon src="/assets/icons/close-circle.svg" class="close-icon" routerLink="/cover-page"></ion-icon>
 
-  <form *ngIf="form" [formGroup]="form" (ngSubmit)="submitForm()">
-    <ion-item>
-      <ion-label>
-        <ion-icon name="person"></ion-icon>
-      </ion-label>
-      <ion-input clearInput type="text" placeholder="Nombre de usuario" formControlName="name" required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>
-        <ion-icon name="mail"></ion-icon>
-      </ion-label>
-      <ion-input clearInput type="email" placeholder="Email" formControlName="email" required></ion-input>
-    </ion-item>
-    <ion-button expand="block" type="submit" [disabled]="!form.valid">Guardar cambios</ion-button>
-    <ion-button expand="block" type="button" (click)="auth.logout()">Cerrar sesión</ion-button>
-  </form>
+
+<div class="acumuladas">
+  <p class="title2">Crestas acumuladas</p>
+  <div class="number-container">
+    <p class="number">{{user.crestas}}</p>
+    <ion-icon src="/assets/icons/cresta.svg"></ion-icon>
+  </div>
+</div>
+
+<div class="rewards-container">
+  <ion-card class="reward-card" *ngFor="let reward of rewards">
+    <ion-card-title>{{reward.name}}</ion-card-title>
+    <div class="imagediv">
+      <img src="{{reward.image}}" alt="Reward">
+    </div>
+    <div class="footer">
+      <p class="crestas">{{reward.crestas}}</p>
+      <ion-icon src="/assets/icons/cresta.svg"></ion-icon>
+    </div>
+  </ion-card>
+</div>
+  
 
 </ion-content>
