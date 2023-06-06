@@ -39,8 +39,8 @@ export class LoginPage implements OnInit {
     this.menuCtrl.enable(false);
 
     this.form = this.formBuilder.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', Validators.required]
+      email: ['chicknchill@admin.es', [Validators.required, Validators.email]],
+      password: ['xeripassword', Validators.required]
     });
   }
 
