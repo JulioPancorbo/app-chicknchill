@@ -1,0 +1,54 @@
+ion-content {
+    --background: var(--ion-color-primary);
+
+    .icon-close {
+        color: var(--ion-color-tertiary);
+        font-size: 25px;
+        margin: 20px;
+        position: absolute;
+    }
+
+    .title {
+        font-family: "LeagueSpartan-Bold";
+        font-size: 26px;
+        color: var(--ion-color-tertiary);
+        text-align: center;
+        margin-top: 70px;        
+    }
+
+    .subtitle {
+        font-family: "LeagueSpartan-SemiBold";
+        font-size: 20px;
+        color: var(--ion-color-tertiary);
+        text-align: center;
+    }
+
+    .crestas-container {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;        
+
+        .number {
+            font-family: LeagueSpartan-Bold;
+            font-size: 60px;
+            color: var(--ion-color-tertiary);
+            margin: 0;
+        }
+
+        ion-icon {
+            font-size: 50px;
+            margin-left: 10px;
+        }
+    }
+
+    .subtitle2 {
+        font-family: "LeagueSpartan-Bold";
+        font-size: 30px;
+        color: var(--ion-color-tertiary);
+        text-align: center;
+        margin-top: 10px;
+    }
+
+
+}
